@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wrapped — Dashboard</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+  <header><a class="wordmark" href="/dashboard">Wrapped</a><div class="profile"><% if (profile.images?.[1]) { %><img src="<%= profile.images[1].url %>" alt=""><% } %><span><%= profile.display_name %></span><form method="post" action="/logout"><button>Log out</button></form></div></header>
+  <main class="dashboard">
+    <section class="intro"><p class="eyebrow">YOUR LAST FOUR WEEKS</p><h1>Here's your current soundtrack.</h1></section>
+    <section><div class="section-heading"><h2>Top artists</h2><span>Short term</span></div><div class="artist-grid"><% artists.forEach((artist) => { %><a class="artist-card" href="<%= artist.external_urls?.spotify || '#' %>" target="_blank" rel="noreferrer"><% if (artist.images?.[0]?.url) { %><img src="<%= artist.images[0].url %>" alt="<%= artist.name %>"><% } else { %><div class="artist-image-placeholder" aria-hidden="true"></div><% } %><h3><%= artist.name %></h3><p><%= artist.genres?.slice(0, 2).join(' · ') || 'Artist' %></p></a><% }) %></div></section>
+    <section class="split"><div><div class="section-heading"><h2>Top tracks</h2><span>Short term</span></div><ol class="track-list"><% tracks.forEach((track, index) => { %><li><span class="rank"><%= String(index + 1).padStart(2, '0') %></span><img src="<%= track.album.images?.[2]?.url %>" alt=""><span class="track-name"><strong><%= track.name %></strong><small><%= track.artists.map((artist) => artist.name).join(', ') %></small></span><a href="<%= track.external_urls.spotify %>" target="_blank" rel="noreferrer">↗</a></li><% }) %></ol></div><div><div class="section-heading"><h2>Recently played</h2><span>Latest 8</span></div><ol class="track-list"><% recent.forEach(({ track }, index) => { %><li><span class="rank"><%= String(index + 1).padStart(2, '0') %></span><img src="<%= track.album.images?.[2]?.url %>" alt=""><span class="track-name"><strong><%= track.name %></strong><small><%= track.artists.map((artist) => artist.name).join(', ') %></small></span><a href="<%= track.external_urls.spotify %>" target="_blank" rel="noreferrer">↗</a></li><% }) %></ol></div></section>
+  </main>
+</body></html>

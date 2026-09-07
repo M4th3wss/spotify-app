@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Afterglow — Spotify Dashboard</title><link rel="stylesheet" href="/styles.css"></head>
+<body class="landing">
+  <main class="hero">
+    <p class="eyebrow">SIMPLE SPOTIFY WRAPPED</p>
+    <h1>Wrapped</h1>
+    <p class="lede">A small, private window into the artists and songs shaping your recent listening.</p>
+    <% if (configured) { %>
+      <a class="button" href="/login"><span>◉</span> Connect Spotify</a>
+    <% } else { %>
+      <div class="setup-note"><strong>One quick setup first.</strong> Copy <code>.env.example</code> to <code>.env</code>, then add your Spotify app credentials.</div>
+    <% } %>
+    <% if (loggedIn) { %><a class="quiet-link" href="/dashboard">Return to dashboard →</a><% } %>
+  </main>
+</body></html>

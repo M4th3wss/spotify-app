@@ -1,0 +1,58 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.3
+2 info using node@v22.18.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\MaTe\Documents\Codex\2026-09-07\hey-x20\.npmrc
+5 silly config load:file:C:\Users\MaTe\.npmrc
+6 silly config load:file:C:\Users\MaTe\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" "C:\\Users\\MaTe\\Documents\\Codex\\2026-09-07\\hey-x20\\work\\npm-cache" "--loglevel" "verbose"
+9 verbose logfile logs-max:10 dir:C:\Users\MaTe\Documents\Codex\2026-09-07\hey-x20\work\npm-cache\_logs\2026-09-07T19_24_16_217Z-
+10 verbose logfile C:\Users\MaTe\Documents\Codex\2026-09-07\hey-x20\work\npm-cache\_logs\2026-09-07T19_24_16_217Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest dotenv@^16.4.7
+15 silly packumentCache full:https://registry.npmjs.org/dotenv cache-miss
+16 http fetch GET https://registry.npmjs.org/dotenv attempt 1 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+17 http fetch GET https://registry.npmjs.org/dotenv attempt 2 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+18 http fetch GET https://registry.npmjs.org/dotenv attempt 3 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+19 silly fetch manifest ejs@^3.1.10
+20 silly packumentCache full:https://registry.npmjs.org/ejs cache-miss
+21 http fetch GET https://registry.npmjs.org/ejs attempt 1 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+22 http fetch GET https://registry.npmjs.org/ejs attempt 2 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+23 http fetch GET https://registry.npmjs.org/ejs attempt 3 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+24 silly fetch manifest express@^4.21.2
+25 silly packumentCache full:https://registry.npmjs.org/express cache-miss
+26 http fetch GET https://registry.npmjs.org/express attempt 1 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+27 http fetch GET https://registry.npmjs.org/express attempt 2 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+28 http fetch GET https://registry.npmjs.org/express attempt 3 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+29 silly fetch manifest express-session@^1.18.1
+30 silly packumentCache full:https://registry.npmjs.org/express-session cache-miss
+31 http fetch GET https://registry.npmjs.org/express-session attempt 1 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+32 http fetch GET https://registry.npmjs.org/express-session attempt 2 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+33 http fetch GET https://registry.npmjs.org/express-session attempt 3 failed with UNABLE_TO_VERIFY_LEAF_SIGNATURE
+34 silly placeDep ROOT dotenv@ OK for: spotify-listening-dashboard@1.0.0 want: ^16.4.7
+35 silly placeDep ROOT ejs@ OK for: spotify-listening-dashboard@1.0.0 want: ^3.1.10
+36 silly placeDep ROOT express@ OK for: spotify-listening-dashboard@1.0.0 want: ^4.21.2
+37 silly placeDep ROOT express-session@ OK for: spotify-listening-dashboard@1.0.0 want: ^1.18.1
+38 verbose type system
+39 verbose stack FetchError: request to https://registry.npmjs.org/dotenv failed, reason: unable to verify the first certificate
+39 verbose stack     at ClientRequest.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+39 verbose stack     at ClientRequest.emit (node:events:518:28)
+39 verbose stack     at emitErrorEvent (node:_http_client:104:11)
+39 verbose stack     at _destroy (node:_http_client:898:9)
+39 verbose stack     at onSocketNT (node:_http_client:918:5)
+39 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+40 error code UNABLE_TO_VERIFY_LEAF_SIGNATURE
+41 error errno UNABLE_TO_VERIFY_LEAF_SIGNATURE
+42 error request to https://registry.npmjs.org/dotenv failed, reason: unable to verify the first certificate
+43 silly unfinished npm timer reify 1788809056703
+44 silly unfinished npm timer reify:loadTrees 1788809056706
+45 verbose cwd C:\Users\MaTe\Documents\Codex\2026-09-07\hey-x20
+46 verbose os Windows_NT 10.0.26200
+47 verbose node v22.18.0
+48 verbose npm  v10.9.3
+49 verbose exit 1
+50 verbose code 1
+51 error A complete log of this run can be found in: C:\Users\MaTe\Documents\Codex\2026-09-07\hey-x20\work\npm-cache\_logs\2026-09-07T19_24_16_217Z-debug-0.log
